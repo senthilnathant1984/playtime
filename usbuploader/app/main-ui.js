@@ -17,8 +17,8 @@
 	var url_sets_erase_sets_command_padded_bin = "https://klpmicro.github.io/playtime/usbuploader/files/binary/sets/erase_sets_command_padded.bin";
 	var url_sets_songs_only_keyed_padded_bin = "https://klpmicro.github.io/playtime/usbuploader/files/binary/sets/songs_only_keyed_padded.bin";
 	
-	var DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS = 50						// 100 milliseconds => 0.1 second
-	var DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS = 50;			// 100 milliseconds => 0.1 second
+	var DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS = 50							// 50 milliseconds
+	var DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS = 50;			// 50 milliseconds
 	var CHUNK_SIZE_OF_SECOND_FILE = 256;											// Chunk size = 256 bytes, the second file will be sent in chunks of every 256 bytes 
 																					// and a delay of DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS will be introduced 
 																					// for every chunk
