@@ -15,7 +15,8 @@
 	var url_sounds_erase_sounds_command_padded_bin = "https://klpmicro.github.io/playtime/usbuploader/files/binary/sounds/erase_sounds_command_padded.bin";
 	var url_sounds_sounds_only_padkey_bin = "https://klpmicro.github.io/playtime/usbuploader/files/binary/sounds/sounds_only_padkey.bin";
 	var url_sets_erase_sets_command_padded_bin = "https://klpmicro.github.io/playtime/usbuploader/files/binary/sets/erase_sets_command_padded.bin";
-	var url_sets_songs_only_keyed_padded_bin = "https://klpmicro.github.io/playtime/usbuploader/files/binary/sets/songs_only_keyed_padded.bin";
+	//var url_sets_songs_only_keyed_padded_bin = "https://klpmicro.github.io/playtime/usbuploader/files/binary/sets/songs_only_keyed_padded.bin";
+	var url_sets_songs_only_keyed_padded_bin = "https://blipbloxmosaic.com/songs_only_shift_by_1";
 	
 	var DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS = 50							// 50 milliseconds
 	var DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS = 50;			// 50 milliseconds
