@@ -1,8 +1,8 @@
 ﻿/***************************************************************************************************************************************************/
 // Programmable variables - Start
 /***************************************************************************************************************************************************/
-var PLAYTIME_ENG_STUDIO_DEVICE_USB_VID = 0x03EB;
-var PLAYTIME_ENG_STUDIO_DEVICE_USB_PID = 0xECAD;
+var PLAYTIME_ENG_STUDIO_DEVICE_USB_VID = 0x0403;
+var PLAYTIME_ENG_STUDIO_DEVICE_USB_PID = 0x6001;
 var PORT_PARAM_BAUDRATE = 115200;
 var PORT_PARAM_DATABITS = 8;
 var PORT_PARAM_STOPBITS = 1;
