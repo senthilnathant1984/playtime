@@ -79,11 +79,11 @@
     font-weight: bold;
   }
 
-.progress-and-status-container {
+.upload-progress-and-status-container {
   display: flex;
   flex-direction: column;
   align-items: flex-start; /* Align items to the left */
-  margin: 10px 0;
+  margin: 0px;
 }
 
 .progress-container {
