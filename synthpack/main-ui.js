@@ -315,4 +315,8 @@
         ui.progressBarFillUpload.style.width = clampedProgress + '%';
     }
 
+	async function Sleep(ms) {
+		return new Promise(resolve => setTimeout(resolve, ms));
+	}
+
 }());
