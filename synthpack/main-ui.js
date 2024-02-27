@@ -165,7 +165,7 @@
 			// Receive the first file - specified by the url firstFileUrl from the server and send to the device
 			bSendingFileInProgress = true;
             displayUploadProgressbar(true);
-            setProgressBar(2);
+            setProgressBar(1);
 			var oRequest = new XMLHttpRequest();
 			oRequest.open("GET", firstFileUrl, true);
 			oRequest.responseType = "arraybuffer";
@@ -176,7 +176,7 @@
 					var selectedPortInfo = finalPorts[0];
 					await WriteToPort(selectedPortInfo, byteArray, false);		// Don't close the write stream of serial port here, close at the last WriteToPort call where we finish writing all the data
 					console.log("First file sent to port");		
-					setProgressBar(5);
+					setProgressBar(3);
 					// First file sent to the device. next send the second file after a delay of 
 					// DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS
 					
@@ -197,12 +197,25 @@
 							}
 							var start = 0;
 							var end = 0;
+							var nCount = numberOfChunks / 95;
+							var nMaxCount = 0;
+							var nProgressBarPercent = 3;
 							for (var i = 0; i < numberOfChunks - 1; i++) {
 								start = i * CHUNK_SIZE_OF_SECOND_FILE;
 								end = start + CHUNK_SIZE_OF_SECOND_FILE;
 								const byteArray = new Uint8Array(arrayBuffer.slice(start, end));
 								var selectedPortInfo = finalPorts[0];
 								await WriteToPort(selectedPortInfo, byteArray, false);
+								nMaxCount ++;
+
+								if (nMaxCount >= nCount) {
+									nMaxCount = 0;
+									nProgressBarPercent++;
+									if (nProgressBarPercent > 100) {
+										nProgressBarPercent = 100;
+									}
+									setProgressBar(nProgressBarPercent);
+								}
 							//	if (i % 2 === 0){
 								//console.log("delaying");
 								await Sleep(DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS);
@@ -215,6 +228,7 @@
 							await WriteToPort(selectedPortInfo, byteArray, true);
 							console.log("Second file sent to port");
 							Sleep(500);
+							setProgressBar(100);
                             
 							ui.textUploadStatus.innerHTML = "File Upload Complete, restart myTRACKS.";
 							
