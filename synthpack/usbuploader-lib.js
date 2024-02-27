@@ -3,12 +3,14 @@
 /***************************************************************************************************************************************************/
 var PLAYTIME_ENG_STUDIO_DEVICE_USB_VID = 0x03EB;
 var PLAYTIME_ENG_STUDIO_DEVICE_USB_PID = 0xECAD;
-var PORT_PARAM_BAUDRATE = 9999999;
+//var PORT_PARAM_BAUDRATE = 9999999;
+var PORT_PARAM_BAUDRATE = 115200;
 var PORT_PARAM_BUFFERSIZE = 4;
 var PORT_PARAM_DATABITS = 8;
 var PORT_PARAM_STOPBITS = 1;
 var PORT_PARAM_PARITY = "none";
-var PORT_PARAM_FLOWCONTROL = "hardware";
+//var PORT_PARAM_FLOWCONTROL = "hardware";
+var PORT_PARAM_FLOWCONTROL = "none";
 
 
 //1024:  1 blinkg

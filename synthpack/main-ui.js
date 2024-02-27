@@ -9,8 +9,8 @@
 	/***************************************************************************************************************************************************/
 
     // File links on web server	
-	var url_sounds_erase_sounds_command_padded_bin = "https://www.playtimeengineering.com/synthpack/erase_sounds_jan_2024";
-	var url_sounds_sounds_only_padkey_bin = "https://www.playtimeengineering.com/synthpack/synthpack_padkey";
+	var url_sounds_erase_sounds_command_padded_bin = "https://senthilnathant1984.github.io/playtime/synthpack/erase_sounds_jan_2024";
+	var url_sounds_sounds_only_padkey_bin = "https://senthilnathant1984.github.io/playtime/synthpack/synthpack_padkey";
 
     var DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS = 35000;	//Was 2000						// 50 milliseconds
 	var DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS = 2;	//5 works		// 50 milliseconds.  Can't see much betweeo 1 and 2.  Saw a fail with 1.  try 2.  2 saw fail.. back to 5.
@@ -56,7 +56,7 @@
 			console.log(ui[k]);
 		}
 		
-        setProgressBar(20);
+        //setProgressBar(20);
 
 		ui.buttonSearchDevice.addEventListener('click', onButtonSearchDeviceClicked);
 		ui.buttonConnectDisconnect.addEventListener('click', onButtonConnectDisconnectClicked);
@@ -165,6 +165,7 @@
 			// Receive the first file - specified by the url firstFileUrl from the server and send to the device
 			bSendingFileInProgress = true;
             displayUploadProgressbar(true);
+            setProgressBar(2);
 			var oRequest = new XMLHttpRequest();
 			oRequest.open("GET", firstFileUrl, true);
 			oRequest.responseType = "arraybuffer";
@@ -175,7 +176,7 @@
 					var selectedPortInfo = finalPorts[0];
 					await WriteToPort(selectedPortInfo, byteArray, false);		// Don't close the write stream of serial port here, close at the last WriteToPort call where we finish writing all the data
 					console.log("First file sent to port");		
-					
+					setProgressBar(5);
 					// First file sent to the device. next send the second file after a delay of 
 					// DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS
 					

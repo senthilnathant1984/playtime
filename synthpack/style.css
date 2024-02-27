@@ -19,6 +19,14 @@
     padding-top: 20px; /* Padding at the top of the page */
   }
 
+.line {
+    width: 55px; /* Length of the line */
+    height: 5px; /* Height of the line */
+    background-color: #AD1AAC; /* Color of the line */
+    margin: auto;
+    margin-top: 0px;
+}
+
   .button-container {
     margin-top: 20px;
   }
