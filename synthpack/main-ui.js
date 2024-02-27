@@ -134,8 +134,9 @@
 				ui.buttonConnectDisconnect.innerHTML = "Connect to myTRACKS"
 				ui.textConnectionStatus.innerHTML = "";
 				enableUploadFileButton(false);
-                displayUploadProgressbar(false);
-                ui.textUploadStatus.innerHTML = "";
+				displayUploadProgressbar(false);
+				ui.textUploadStatus.innerHTML = "";
+				bSendingFileInProgress = false;
 			}
 		}
 		catch (err) {	
