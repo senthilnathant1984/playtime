@@ -87,7 +87,7 @@
 		
 		// The following call will find and add the ports to the ports list if 
 		// they are already paired / permitted by the user
-		enumeratePorts_ui();
+		// enumeratePorts_ui();
 	};
 
     window.addEventListener('load', initializeWindow);
