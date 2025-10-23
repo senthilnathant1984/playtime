@@ -176,7 +176,7 @@
 			oRequest.onload = async function (oEvent) {
 				// File downloaded: Increment the download counter
 				// Increment the counter fc-erase-sounds for downloadtracker
-				fetch("https://api.counterapi.dev/v2/downloadtracker/fc-erase-sounds/up")
+				/*fetch("https://api.counterapi.dev/v2/downloadtracker/fc-erase-sounds/up")
 					.then(response => response.json())
 					.then(data => {
 						console.log("Counter incremented successfully!");
@@ -184,7 +184,7 @@
 					})
 					.catch(error => {
 						console.error("Error incrementing counter:", error);
-					});
+					});*/
 				var arrayBuffer = oRequest.response;
 				if (arrayBuffer) {
 					var byteArray = new Uint8Array(arrayBuffer);
