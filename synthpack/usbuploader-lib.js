@@ -3,19 +3,14 @@
 /***************************************************************************************************************************************************/
 //var PLAYTIME_ENG_STUDIO_DEVICE_USB_VID = 0x03EB;
 //var PLAYTIME_ENG_STUDIO_DEVICE_USB_PID = 0xECAD;
-
 var PLAYTIME_ENG_STUDIO_DEVICE_USB_VID = 0x067B;
-var PLAYTIME_ENG_STUDIO_DEVICE_USB_PID = 0x2303;
-
-//var PORT_PARAM_BAUDRATE = 9999999;
-var PORT_PARAM_BAUDRATE = 921600;
-//var PORT_PARAM_BUFFERSIZE = 4;
-var PORT_PARAM_BUFFERSIZE = 8;
+var PLAYTIME_ENG_STUDIO_DEVICE_USB_PID = 0x23C3;
+var PORT_PARAM_BAUDRATE = 9999999;
+var PORT_PARAM_BUFFERSIZE = 4;
 var PORT_PARAM_DATABITS = 8;
 var PORT_PARAM_STOPBITS = 1;
 var PORT_PARAM_PARITY = "none";
-//var PORT_PARAM_FLOWCONTROL = "hardware";
-var PORT_PARAM_FLOWCONTROL = "none";
+var PORT_PARAM_FLOWCONTROL = "hardware";
 
 
 //1024:  1 blinkg

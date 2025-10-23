@@ -9,11 +9,11 @@
 	/***************************************************************************************************************************************************/
 
     // File links on web server	
-	var url_sounds_erase_sounds_command_padded_bin = "https://www.playtimeengineering.com/synthpack/erase_sounds_jan_2024";
-	var url_sounds_sounds_only_padkey_bin = "https://www.playtimeengineering.com/synthpack/synthpack_padkey";
+	var url_sounds_erase_sounds_command_padded_bin = "https://mytracks.blipblox.com/myTRACKS_upgrades/myTRACKS_sounds/first_chair/erase_sounds_jan_2024";
+	var url_sounds_sounds_only_padkey_bin = "https://mytracks.blipblox.com/myTRACKS_upgrades/myTRACKS_sounds/first_chair/band_and_orch";
 
-  var DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS = 35000;	//Was 2000						// 50 milliseconds
-	var DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS = 2;	//5 works		// 50 milliseconds.  Can't see much betweeo 1 and 2.  Saw a fail with 1.  try 2.  2 saw fail.. back to 5.
+  var DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS = 40000;	//Was 2000						// 50 milliseconds
+	var DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS = 6;	//5 works		// 50 milliseconds.  Can't see much betweeo 1 and 2.  Saw a fail with 1.  try 2.  2 saw fail.. back to 5.
 	
     var CHUNK_SIZE_OF_SECOND_FILE = 256;		// was 256
 
@@ -87,7 +87,7 @@
 		
 		// The following call will find and add the ports to the ports list if 
 		// they are already paired / permitted by the user
-		// enumeratePorts_ui();
+	//	enumeratePorts_ui();
 	};
 
     window.addEventListener('load', initializeWindow);
@@ -288,7 +288,7 @@
     var enableSearchDeviceButton = function (bEnable) {
        if (bEnable == true) {
             ui.buttonSearchDevice.disabled = false;
-            ui.buttonSearchDevice.style.backgroundColor  = "#425CC7";
+            ui.buttonSearchDevice.style.backgroundColor  = "#7b59c7";
        } else {
             ui.buttonSearchDevice.disabled = true;
             ui.buttonSearchDevice.style.backgroundColor  = "#53565A";
@@ -298,7 +298,7 @@
     var enableConnectDisconnectButton = function (bEnable) {
         if (bEnable == true) {
             ui.buttonConnectDisconnect.disabled = false;
-            ui.buttonConnectDisconnect.style.backgroundColor  = "#425CC7";
+            ui.buttonConnectDisconnect.style.backgroundColor  = "#7b59c7";
         } else {
             ui.buttonConnectDisconnect.disabled = true;
             ui.buttonConnectDisconnect.style.backgroundColor  = "#53565A";
@@ -308,7 +308,7 @@
      var enableUploadFileButton = function (bEnable) {
         if (bEnable == true) {
             ui.buttonUploadFile.disabled = false;
-            ui.buttonUploadFile.style.backgroundColor  = "#425CC7";
+            ui.buttonUploadFile.style.backgroundColor  = "#7b59c7";
         } else {
             ui.buttonUploadFile.disabled = true;
             ui.buttonUploadFile.style.backgroundColor  = "#53565A";

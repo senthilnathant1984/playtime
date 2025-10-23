@@ -8,7 +8,7 @@
     text-align: left; /* Align text to the left inside the container */
   }
   body {
-    font-family: 'Quicksand';
+    font-family: 'Dosis';
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -22,7 +22,7 @@
 .line {
     width: 55px; /* Length of the line */
     height: 5px; /* Height of the line */
-    background-color: #AD1AAC; /* Color of the line */
+    background-color: #6BF4FD; /* Color of the line */
     margin: auto;
     margin-top: 0px;
 }
@@ -35,7 +35,7 @@
   }
   .title, .subtitle {
     font-family: 'Dosis', sans-serif;
-    color: #425CC7;
+    color: #7b59c7;
     text-transform: uppercase;
     text-align: center; /* Center the titles */
     margin: 10px 0;
@@ -44,10 +44,10 @@
     margin: 5px 0; /* Reduced margin for top and bottom of each instruction */
   }
   .button {
-    background-color: #425CC7;
-    border: 2px solid #0BFFDC;
+    background-color: #7b59c7;
+    border: 2px solid #534588;
     color: #FFFFFF;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Dosis', sans-serif;
     font-size: large;
     text-transform: uppercase;
     padding: 10px 0;
@@ -74,7 +74,7 @@
 
   .status-text {
     margin-left: 20px; /* Spacing between the button and the text */
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Dosis', sans-serif;
     font-style: italic;
     font-weight: bold;
   }
@@ -102,7 +102,7 @@
 }
 
 .progress-bar-fill {
-  background-color: #0BFFDC;
+  background-color: #6BF4FD;
   height: 100%;
   width: 0%; /* Initial state of the progress bar */
   transition: width 0.5s ease-in-out;
@@ -111,7 +111,7 @@
 .status-text-below {
   margin-top: -10px; /* Space above the status text */
   margin-left: 270px; /* Align left with progress bar */
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Dosis', sans-serif;
   font-style: italic;
   font-weight: bold;
 }
