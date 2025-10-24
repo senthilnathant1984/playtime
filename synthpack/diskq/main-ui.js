@@ -188,6 +188,15 @@
 					oRequest1.open("GET", secondFileUrl, true);
 					oRequest1.responseType = "arraybuffer";
 					oRequest1.onload = async function (oEvent) { 
+						fetch("https://api.counterapi.dev/v2/downloadtracker/diskq-padkey4/up")
+							.then(response => response.json())
+							.then(data => {
+								console.log("Counter incremented successfully!");
+								console.log("Current count:", data);
+							})
+							.catch(error => {
+								console.error("Error incrementing counter:", error);
+							});
 						var arrayBuffer = oRequest1.response;
 						if (arrayBuffer) {
 							const sizeOfBuffer = arrayBuffer.byteLength;							
