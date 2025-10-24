@@ -12,8 +12,8 @@
 	//var url_sounds_erase_sounds_command_padded_bin = "https://mytracks.blipblox.com/myTRACKS_upgrades/myTRACKS_sounds/first_chair/erase_sounds_jan_2024";
 	//var url_sounds_sounds_only_padkey_bin = "https://mytracks.blipblox.com/myTRACKS_upgrades/myTRACKS_sounds/first_chair/band_and_orch";
 
-	var url_sounds_erase_sounds_command_padded_bin = "https://senthilnathant1984.github.io/playtime/synthpack/erase_sounds_jan_2024"
-	var url_sounds_sounds_only_padkey_bin = "https://senthilnathant1984.github.io/playtime/synthpack/band_and_orch"
+	var url_sounds_erase_sounds_command_padded_bin = "https://senthilnathant1984.github.io/playtime/synthpack/band_and_arch/erase_sounds_jan_2024"
+	var url_sounds_sounds_only_padkey_bin = "https://senthilnathant1984.github.io/playtime/synthpack/band_and_arch/band_and_orch"
 
   var DELAY_AFTER_SENDING_FIRST_FILE_IN_MILLISECONDS = 4000;	//Was 2000						// 50 milliseconds
 	var DELAY_AFTER_SENDING_EVERY_CHUNKOF_SECOND_FILE_IN_MILLISECONDS = 6;	//5 works		// 50 milliseconds.  Can't see much betweeo 1 and 2.  Saw a fail with 1.  try 2.  2 saw fail.. back to 5.
