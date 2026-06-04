@@ -63,7 +63,7 @@ clientApp.checkForEmbravaConnect = function (querystringarg) {
         {
             console.log("WebSocket Error");
             console.log(evt);
-            window.location.href = "ec-not-running.html?" + querystring;
+            //window.location.href = "ec-not-running.html?" + querystring;
         };
 
         socket.onclose = function(evt)
