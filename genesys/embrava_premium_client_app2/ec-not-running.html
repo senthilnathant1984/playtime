@@ -1,0 +1,420 @@
+﻿<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status Lights for PureCloud</title>
+<meta name="description" content="A set of modern text styles and hover effects for your inspiration" />
+<meta name="keywords" content="text style, link style, link hover, effect, animation, inspiration, web design" />
+<meta name="author" content="Codrops" />
+<link rel="shortcut icon" href="favicon.ico">
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+  <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+ <style>
+@font-face {
+  font-family: 'ErasITC-Light';
+  src: url('fonts/ErasITC-Light.woff') format('woff'),
+       url('fonts/-Light.ttf') format('truetype'),
+       url('fonts/ErasITC-Light.svg#ErasITC-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ErasLightITC';
+  src: url('fonts/ErasLightITC.eot');
+  src: url('fonts/ErasLightITC.woff2') format('woff2'),
+       url('fonts/ErasLightITC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ErasITC-Medium';
+  src: url('fonts/ErasITC-Medium.woff') format('woff'),
+       url('fonts/ErasITC-Medium.ttf') format('truetype'),
+       url('fonts/ErasITC-Medium.svg#ErasITC-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ErasMediumITC';
+  src: url('fonts/ErasMediumITC.eot');
+  src: url('fonts/ErasMediumITC.woff2') format('woff2'),
+       url('fonts/ErasMediumITC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+    margin: 0;
+    font-family: 'Eras Light ITC';
+    padding: 2px 0px 0px 10px;
+    background-color: #1a364c;
+    border-bottom: 1px solid #DDDDDD;
+    height: 50px;
+}
+
+body {
+   font-family: 'ErasITC-Medium';
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+  .group-btn{
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    text-align: center;
+  }
+  .group-btn a{
+    display: inline-block;
+    width: 25%;
+    margin: 0 10px;
+    vertical-align: top;
+    cursor: pointer;
+  }
+  .footer{
+  background: #1a364c;
+height: 50px;
+  }
+  .footer p{
+    color: #fff;
+font-size: 22px;
+letter-spacing: 1px;
+margin: 0;
+text-align: right;
+padding-right: 70px;
+padding-top: 12px;
+  }
+  .footer img {
+    height: 40px;
+    margin-left: 10px;
+    float: right;
+    margin: 4px 20px;
+}
+    button {
+    border-radius: 5px 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    height: 46px;
+    width: 140px;
+    margin: 1px 5px;
+}
+  .btn-info {
+    background-color: #34b3dd;
+    color: white;
+    border: 1px solid #34b3dd;
+    border-bottom: 3px solid #24a3cd;
+}
+
+.btn-info:hover {
+    background-color: #25c0df;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+  .group-btn a.embrava-link{
+  }
+  .premium-app-ui .caption p a{
+    color: #1a364c;
+    font-weight: bold;
+  }
+  .group-btn a.resellers-btn{
+    background: #3d3d3d;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Eras Light ITC';
+    font-size: 18px;
+    padding: 7px 0;
+    position: relative;
+  }
+  .group-btn a img.icon-logo{ 
+        cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+  }
+  .group-btn a img.icon-amazon{
+        cursor: pointer;
+    display: block;
+    width: 100%;
+    height: 35px;
+    margin: 0 auto;
+  }
+  .premium-app-ui .caption p{
+    display: block;
+    margin: 10px auto 16px;
+    color: #292929;
+    font-size: 16px;
+    text-align: left;
+    padding: 0 20px;
+  }
+  .premium-app-ui #mobile_caption{
+    display:none;
+  }
+  .premium-app-ui .hero-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+     height: calc(100vh - 50px);
+  }
+  .premium-app-ui .caption{
+    background: #c7ccc7;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    max-width: 590px;
+    top: 30px;
+    right: 14%;
+    overflow: hidden;
+  }
+  .premium-app-ui .caption h4{
+    background: #1a364c;
+    color: #fff;
+    margin: 0;
+    font-size: 44px;
+    font-weight: 200;
+    font-family: 'ErasITC-Light';
+    line-height: 48px;
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  .premium-app-ui .caption h5{
+    background: #4DD9FF;
+    color: #fff;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 28px;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+    display: block;
+    text-align: center;
+  }
+  .premium-app-ui .caption p.click-p{
+    display: block;
+    margin: 15px auto 0;
+    color: #000;
+    font-size: 18px;
+  }
+  .premium-app-ui img.icon-e{
+    width: 100%;
+    max-width: 22px;
+    margin: 0 3px;
+    position: relative;
+    top: 4px;
+  }
+  .premium-app-ui p.text-premium{
+    display: block;
+    margin: 10px auto 18px;
+    color: #000;
+    font-size: 18px;
+  }
+  .premium-app-ui p.text-premium a{
+    color: #1a364c;
+    font-weight: bold;
+    font-family: "ErasITC-Medium";
+    cursor: pointer;
+  }
+  @media only screen and (max-width: 1519px){
+    .premium-app-ui .caption {
+      right: 100px;
+    }
+  }
+  @media only screen and (max-width: 1199px){
+    .premium-app-ui .caption {
+      max-width: 500px;
+      right: 90px;
+    }
+    .premium-app-ui .caption h4 {
+      font-size: 34px;
+      line-height: 38px;
+    }
+    .premium-app-ui .caption h5 {
+      padding: 8px 20px;
+      font-size: 24px;
+      line-height: 25px;
+    }
+    .premium-app-ui .caption p.click-p {
+      margin: 10px auto 0;
+      font-size: 16px;
+    }
+    .premium-app-ui p.text-premium {
+      margin: 8px auto 15px;
+      font-size: 16px;
+    }
+    .premium-app-ui .hero-image {
+      /*height: 590px;*/
+    }
+  }
+  @media only screen and (max-width: 991px){
+    .premium-app-ui .hero-image {
+     /* height: 470px;*/
+    }
+    .premium-app-ui .caption {
+      max-width: 452px;
+      right: 60px;
+      top: 12px;
+    }
+    .premium-app-ui .caption h4 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    .premium-app-ui .caption p.click-p {
+      margin: 10px auto 0;
+      font-size: 15px;
+    }
+    .premium-app-ui p.text-premium {
+      margin: 6px auto 15px;
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .premium-app-ui .hero-image {
+      /*height: 470px;*/
+      background-position: 82%;
+    }
+  }
+  @media only screen and (max-width: 639px){
+    .premium-app-ui .hero-image {
+     /* height: 795px;*/
+      background-position: 93%;
+    }
+    .premium-app-ui .caption {
+      max-width: 450px;
+      right: 15px;
+      top: 12px;
+    }
+  }
+  @media only screen and (max-width: 479px){
+    .premium-app-ui .hero-image {
+    height: calc(100vh - 460px);
+}
+     .footer p{
+    color: #fff;
+font-size: 22px;
+letter-spacing: 1px;
+margin: 0;
+text-align: center;
+padding-right: 0px;
+padding-top: 12px;
+  }
+    .premium-app-ui .caption h4 {
+    font-size: 25px;
+    line-height: 30px;
+}
+    .premium-app-ui .caption h5 {
+    font-size: 22px;
+    line-height: 22px;
+}
+    .group-btn a.resellers-btn {
+    font-size: 14px;
+    }
+    .group-btn a {
+      width: 28%;
+      margin: 0 2px;
+    }
+    .premium-app-ui .hero-image .caption{
+      display:none;
+    }
+    .premium-app-ui #mobile_caption{
+      display: block;
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 100%;
+      max-width: 100%;
+    }
+    .premium-app-ui .hero-image {
+      height: 255px;
+      background-position: 85%;
+    }
+  }
+  @media only screen and (max-width: 379px){
+  }
+
+</style>
+
+</head>
+<body class="content-email">
+
+    <header>
+        <!--<button id="start" class="btn-info right" onclick="goToUninstallPage()">
+            <span class="txt-start">Uninstall App</span> <i class="button-icon fas fa-chevron-right"></i>
+        </button>-->
+    </header>
+
+    <div id="page" class="premium-app-ui">
+        <div class="hero-image" style="background-image: url(img/new-app.jpg);">
+            <div class="caption">
+                <h4>Status Lights for PureCloud</h4>
+                <h5>You’re almost there..</h5>
+                <p> Complete the steps below to start using your status light:</p>
+                <p>1. Connect your status light to your PC. If you don’t have a status light, you can purchase them here:</p>
+                <div class="group-btn">
+                    <a class="embrava-link" href="https://embrava.com/collections/all" target="_blank"><img class="icon-logo" src="img/new.png" /></a>
+                    <a class="amazon-btn" href="https://www.amazon.com/Embrava/b/ref=w_bl_hsx_s_off_web_18114217011?ie=UTF8&node=18114217011&field-lbr_brands_browse-bin=Embrava" target="_blank">
+                        <img class="icon-amazon" src="img/aman.jpg" />
+                    </a>
+                    <a class="resellers-btn" href="https://embrava.com/pages/where-to-buy" target="_blank">Resellers > </a>
+                </div>
+                <p>2. Install and run Embrava Connect. You can download Embrava Connect from <a href="https://embrava.com/pages/software" target="_blank">www.embrava.com/install.</a></p>
+                <p>3. Refresh this page.</p>
+                <p>For help, visit: <a href="https://embrava.com/pages/support-call" target="_blank">www.embrava.com/support</a></span></p>
+
+            </div>
+        </div>
+        <div id="mobile_caption" class="caption">
+            <h4>Status Lights for PureCloud</h4>
+            <h5>You’re almost there..</h5>
+            <p> Complete the steps below to start using your status light:</p>
+            <p>1. Connect your status light to your PC. If you don’t have a status light, you can purchase them here:</p>
+            <div class="group-btn">
+                <a class="embrava-link" href="https://embrava.com/collections/all" target="_blank"><img class="icon-logo" src="img/new.png" /></a>
+                <a class="amazon-btn" href="https://www.amazon.com/Embrava/b/ref=w_bl_hsx_s_off_web_18114217011?ie=UTF8&node=18114217011&field-lbr_brands_browse-bin=Embrava" target="_blank">
+                    <img class="icon-amazon" src="img/aman.jpg" />
+                </a>
+                <a class="resellers-btn" href="https://embrava.com/pages/where-to-buy" target="_blank">Resellers > </a>
+            </div>
+            <p>2. Install and run Embrava Connect. You can download Embrava Connect from <a href="https://embrava.com/pages/software" target="_blank">www.embrava.com/install.</a></p>
+            <p>3. Refresh this page.
+            <p>For help, visit: <a href="https://embrava.com/pages/support-call" target="_blank">www.embrava.com/support</a></span></p>
+        </div>
+        <div class="footer">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </div>
+
+    <script>
+        function goToUninstallPage() {
+            var querystring = document.getElementById("querystring").innerHTML;
+            querystring = decodeURIComponent(querystring);
+            window.location = './wizard/uninstall.html?' + querystring;
+        }
+    </script>
+
+    <script type="module">
+        var queryString = window.location.search.substring(1);
+        var querystring = encodeURIComponent(queryString);
+        var s = '<p id="querystring" hidden>' + querystring + '</p>';
+        var queryStringHtmlObject = document.createElement('p');
+        queryStringHtmlObject.innerHTML = s;
+        document.body.appendChild(queryStringHtmlObject);
+    </script>
+
+
+
+</body>

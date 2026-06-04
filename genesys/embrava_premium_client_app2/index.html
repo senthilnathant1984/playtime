@@ -1,0 +1,375 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Status Lights for Genesys Cloud</title>
+<meta name="description" content="A set of modern text styles and hover effects for your inspiration" />
+<meta name="keywords" content="text style, link style, link hover, effect, animation, inspiration, web design" />
+<meta name="author" content="Codrops" />
+<link rel="shortcut icon" href="favicon.ico">
+<!--[if IE]>
+<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/chronomouse@2.4.0/chronomouse.2.4.0.min.js"></script>
+    <script src="https://sdk-cdn.mypurecloud.com/client-apps/1.0.0/purecloud-client-app-sdk.js"></script>
+    <script src="https://sdk-cdn.mypurecloud.com/javascript/29.1.0/purecloud-platform-client-v2.min.js"></script>  
+
+ <style>
+
+@font-face {
+  font-family: 'ErasITC-Light';
+  src: url('fonts/ErasITC-Light.woff') format('woff'),
+       url('fonts/-Light.ttf') format('truetype'),
+       url('fonts/ErasITC-Light.svg#ErasITC-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ErasLightITC';
+  src: url('fonts/ErasLightITC.eot');
+  src: url('fonts/ErasLightITC.woff2') format('woff2'),
+       url('fonts/ErasLightITC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ErasITC-Medium';
+  src: url('fonts/ErasITC-Medium.woff') format('woff'),
+       url('fonts/ErasITC-Medium.ttf') format('truetype'),
+       url('fonts/ErasITC-Medium.svg#ErasITC-Medium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'ErasMediumITC';
+  src: url('fonts/ErasMediumITC.eot');
+  src: url('fonts/ErasMediumITC.woff2') format('woff2'),
+       url('fonts/ErasMediumITC.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+    margin: 0;
+    font-family: 'Eras Light ITC';
+    padding: 2px 0px 0px 10px;
+    background-color: #1a364c;
+    border-bottom: 1px solid #DDDDDD;
+    height: 50px;
+}
+
+body {
+   font-family: 'ErasITC-Medium';
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+ .footer{
+  background: #1a364c;
+height: 50px;
+  }
+  .footer p{
+    color: #fff;
+font-size: 22px;
+letter-spacing: 1px;
+margin: 0;
+text-align: right;
+padding-right: 70px;
+padding-top: 12px;
+  }
+
+  .footer img {
+    height: 40px;
+    margin-left: 10px;
+    float: right;
+    margin: 4px 20px;
+}
+
+  button {
+    border-radius: 5px 5px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1em;
+    cursor: pointer;
+    height: 46px;
+    width: 140px;
+    margin: 1px 5px;
+}
+  .btn-info {
+    background-color: #34b3dd;
+    color: white;
+    border: 1px solid #34b3dd;
+    border-bottom: 3px solid #24a3cd;
+}
+
+.btn-info:hover {
+    background-color: #25c0df;
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+  .premium-app-ui #mobile_caption{
+    display:none;
+  }
+  .premium-app-ui .hero-image{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    height: calc(100vh - 50px);
+  }
+  .premium-app-ui .caption{
+    background: #c7ccc7;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    max-width: 590px;
+    top: 30px;
+    right: 14%;
+    overflow: hidden;
+  }
+  .premium-app-ui .caption h4{
+    background: #1a364c;
+    color: #fff;
+    margin: 0;
+    font-size: 44px;
+    font-weight: 200;
+    font-family: 'ErasITC-Light';
+    line-height: 48px;
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+  .premium-app-ui .caption h5{
+    background: #4DD9FF;
+    color: #fff;
+    margin: 0;
+    padding: 10px 20px;
+    font-size: 28px;
+    line-height: 30px;
+    letter-spacing: 0.25px;
+    display: block;
+    text-align: center;
+  }
+  .premium-app-ui .caption p.click-p{
+    display: block;
+    margin: 15px auto 0;
+    color: #000;
+    font-size: 18px;
+  }
+  .premium-app-ui img.icon-e{
+    width: 100%;
+    max-width: 22px;
+    margin: 0 3px;
+    position: relative;
+    top: 4px;
+  }
+  .premium-app-ui p.text-premium{
+    display: block;
+    margin: 10px auto 18px;
+    color: #000;
+    font-size: 18px;
+  }
+  .premium-app-ui p.text-premium a{
+    color: #1a364c;
+    font-weight: bold;
+    font-family: "ErasITC-Medium";
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 1519px){
+    .premium-app-ui .caption {
+      right: 100px;
+    }
+  }
+  @media only screen and (max-width: 1199px){
+    .premium-app-ui .caption {
+      max-width: 500px;
+      right: 70px;
+    }
+    .premium-app-ui .caption h4 {
+      font-size: 34px;
+      line-height: 38px;
+    }
+    .premium-app-ui .caption h5 {
+      padding: 8px 20px;
+      font-size: 24px;
+      line-height: 25px;
+    }
+    .premium-app-ui .caption p.click-p {
+      margin: 10px auto 0;
+      font-size: 16px;
+    }
+    .premium-app-ui p.text-premium {
+      margin: 8px auto 15px;
+      font-size: 16px;
+    }
+    .premium-app-ui .hero-image {
+     /* height: 590px;*/
+    }
+  }
+  @media only screen and (max-width: 991px){
+    .premium-app-ui .hero-image {
+     /* height: 470px;*/
+    }
+    .premium-app-ui .caption {
+      max-width: 430px;
+      right: 25px;
+      top: 12px;
+    }
+    .premium-app-ui .caption h4 {
+      font-size: 28px;
+      line-height: 32px;
+    }
+    .premium-app-ui .caption p.click-p {
+      margin: 10px auto 0;
+      font-size: 15px;
+    }
+    .premium-app-ui p.text-premium {
+      margin: 6px auto 15px;
+      font-size: 15px;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    .premium-app-ui .hero-image {
+     /* height: 470px;*/
+      background-position: right;
+    }
+  }
+  @media only screen and (max-width: 639px){
+  }
+  @media only screen and (max-width: 479px){
+    .premium-app-ui .hero-image {
+    height: calc(100vh - 240px);
+}
+    .footer p{
+    color: #fff;
+font-size: 22px;
+letter-spacing: 1px;
+margin: 0;
+text-align: center;
+padding-right: 0px;
+padding-top: 12px;
+  }
+    .premium-app-ui .caption h4 {
+    font-size: 25px;
+    line-height: 30px;
+}
+    .premium-app-ui .caption h5 {
+    font-size: 22px;
+    line-height: 22px;
+}
+    .premium-app-ui .hero-image .caption{
+       display:none;
+    }
+    .premium-app-ui #mobile_caption{
+         display: block;
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+    .premium-app-ui .hero-image {
+      /*height: 255px;*/
+      background-position: 85%;
+    }
+  }
+  @media only screen and (max-width: 379px){
+  }
+
+</style>
+
+</head>
+
+<body class="content-email">
+
+    <header>
+        <!--<button id="start" class="btn-info right" onclick="goToUninstallPage()">
+            <span class="txt-start">Uninstall App</span> <i class="button-icon fas fa-chevron-right"></i>
+        </button>-->
+    </header>
+
+    <div id="page" class="premium-app-ui">
+
+        <div class="hero-image" style="background-image: url(img/new-app.jpg);">
+            <div class="caption">
+                <h4>Status Lights for Genesys Cloud</h4>
+                <h5>Connected</h5>
+                <p class="click-p">Click the  <img class="icon-e" src="img/e.jpg" /> icon in your System Tray to configure your alerts.</p>
+                <p class="text-premium"> For help, visit: <a href="https://embrava.com/pages/support-call" target="_blank">www.embrava.com/support</a></p>
+            </div>
+        </div>
+        <div id="mobile_caption" class="caption">
+            <h4>Status Lights for Genesys Cloud</h4>
+            <h5>Connected</h5>
+            <p class="click-p">Click the  <img class="icon-e" src="img/e.jpg" /> icon in your System Tray to configure your alerts.</p>
+            <p class="text-premium"> For help, visit: <a href="https://embrava.com/pages/support-call" target="_blank">www.embrava.com/support</a></p>
+        </div>
+        <div class="footer">
+            <img src="logo.png" alt="Logo">
+        </div>
+    </div>
+
+    <script>
+        function goToUninstallPage() {
+            var querystring = document.getElementById("querystring").innerHTML;
+            querystring = decodeURIComponent(querystring);
+            window.location = './wizard/uninstall.html?' + querystring;
+        }
+    </script>
+
+    <script type="module">
+        import clientApp from './client_app.js';
+
+        var queryString = window.location.search.substring(1);
+        if (!queryString) {
+            queryString = decodeURIComponent(window.location.hash);
+            queryString = decodeURIComponent(queryString);
+        }
+        var pairs = queryString.split('&');
+        var langTag = null;
+        var pcEnv = null;
+
+        for (var i = 0; i < pairs.length; i++) {
+            var currParam = pairs[i].split('=');
+            if (currParam[0] === 'langTag') {
+                langTag = currParam[1];
+            } else if (currParam[0] === 'lang' && langTag === null) {
+                langTag = currParam[1];
+            } else if (currParam[0] === 'pcEnvironment') {
+                pcEnv = currParam[1];
+            } else if (currParam[0] === 'environment') {
+                pcEnv = currParam[1];
+            }
+        }
+
+        var querystring = "langTag=" + langTag + "&environment=" + pcEnv;
+        querystring = encodeURIComponent(querystring);
+        var s = '<p id="querystring" hidden>' + querystring + '</p>';
+        var queryStringHtmlObject = document.createElement('p');
+        queryStringHtmlObject.innerHTML = s;
+        document.body.appendChild(queryStringHtmlObject);
+
+        clientApp.checkForEmbravaConnect("langTag=" + langTag + "&environment=" + pcEnv);
+
+        clientApp.setup(pcEnv, langTag, "index.html");
+        clientApp.purecloudClientApi = new window.purecloud.apps.ClientApp();
+    </script>
+
+</body>
+
+</html>
